@@ -1,2 +1,21 @@
-<h1>Events#new</h1>
-<p>Find me in app/views/events/new.html.erb</p>
+<%= form_for @event do |f| %>
+    <h2>Create Event</h2>
+
+    <%= f.label :title, "Event Title:" %>
+    <%= f.text_field :title, placeholder: "Joey Urbik's birthday" %>
+
+    <%= f.label :date, "Date:" %>
+    <%= f.datetime_select :date, ampm: true, default: DateTime.tomorrow + 12.hours %>
+
+    <%= f.label :location, "Location:" %>
+    <%= f.text_field :location, placeholder: "Stephen Gerkes' parents' house" %>
+
+    <%= f.label :description, "Event Description:" %>
+    <%= f.text_area :description, placeholder: "Optional - add details like what to bring or wear" %>
+
+
+    <div class="submit">
+      <%= f.submit "Create Event" %>
+    </div>
+
+<% end %>
