@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  get 'events/index'
+
+  get 'events/new'
+
+  get 'events/show'
+
   root 'sessions#new'
 
   get '/login', to: 'sessions#new'
