@@ -2,16 +2,16 @@
 
 <h3>Events created</h3>
 <% @user.created_events.each do |event| %>
-    <h5><%= event.name %></h5>
+    <h5><%= link_to event.name, event %></h5>
 <% end %>
 
 <h3>Future appearances</h3>
 <% @upcoming_events.each do |event| %>
-    <h5><%= event.name %></h5>
+    <h5><%= link_to event.name, event %></h5>
 <% end %>
 
 <h3>Past appearances</h3>
 <% @prev_events.each do |event| %>
-    <h5><%= event.name %></h5>
+    <h5><%= link_to event.name, event %></h5>
 <% end %>
 
