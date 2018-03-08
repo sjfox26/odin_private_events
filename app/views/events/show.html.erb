@@ -7,5 +7,10 @@
 <h3>Location: <%= @event.location %></h3>
 <h3>Info: <%= @event.description %></h3>
 
+<h4>Attending</h4>
+<% @event.event_attendees.each do |attendee| %>
+    <p><%= attendee.name %></p>
+<% end %>
+
 
 
