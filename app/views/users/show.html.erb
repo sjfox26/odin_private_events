@@ -5,11 +5,6 @@
     <h5><%= event.name %></h5>
 <% end %>
 
-<h3>Events attending</h3>
-<% @user.events.each do |event| %>
-  <h5><%= event.name %></h5>
-<% end %>
-
 <h3>Future appearances</h3>
 <% @upcoming_events.each do |event| %>
     <h5><%= event.name %></h5>
